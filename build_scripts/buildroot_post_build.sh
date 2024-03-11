@@ -200,3 +200,8 @@ pushd $GIT_ROOT/submodules/KlipperScreen/
 cp -r screen.py docs README.md LICENSE ks_includes panels styles scripts $TARGET_ROOT/root/printer_software/KlipperScreen/
 create_version ./ > $TARGET_ROOT/root/printer_software/KlipperScreen/.version
 popd
+
+###############################
+# Remove nfs server start components
+###############################
+rm -f $TARGET_ROOT/etc/init.d/S60nfs
